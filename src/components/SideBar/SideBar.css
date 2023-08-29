@@ -1,0 +1,144 @@
+.Container {
+   display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e213a;
+    
+  }
+  .container2{
+    display: none ;
+    width: 400px;
+    position: absolute;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    z-index: 4;
+    
+
+  }
+  .aparece{
+    display: block;
+  }
+  .btnSearch {
+    background-color: #50515e;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+  .btn{
+    background-color: #61646f;
+    color: white;
+    font-size: 2rem !important;
+    border-radius: 50%;
+    padding: 0.5rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+  .mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e1e9;
+    display: grid;
+    grid-template-rows: repeat(5, 4rem);
+    gap: 1rem;
+    padding: 2rem;
+    transform: translateY(-100%);
+    transition: 1s;
+    z-index: 6;
+  }
+   .buscar {
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 1rem;
+  }
+  .form label {
+    border: 1px solid #828492;
+    padding: 1rem 1rem 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  .form span {
+    font-size: 2rem;
+    color: #a3a5b1;
+  }
+  .form input, .form input:-internal-autofill-selected {
+    background-color: #1e213a;
+    border: none;
+    color: #5d6071;
+    outline: none;
+    width: 100%;
+    height: 2rem;
+  }
+  .form button {
+    background-color: #3c47e9;
+    border: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .btn {
+    background-color: transparent;
+    text-align: left;
+    color: transparent;
+    border: 1px solid transparent;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .btn span:first-child {
+    margin-right: auto;
+    margin-left: 0;
+    color: #3f4257;
+  }
+  .btn span:not(:first-child) {
+    color: transparent;
+  }
+  .btn:hover {
+    border: 1px solid #3f4257;
+  }
+  .btn:hover > span:not(:first-child) {
+    color: #3f4257;
+  }
+  .active {
+    transform: translateY(0rem);
+  }
+  @media (min-width: 1000px) {
+    .mobile {
+      width: 45.9rem;
+    }
+  }
+  .local{
+    background-color: transparent;
+    color: rgb(175, 163, 163);
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    
+  }
+  .cont3{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 50px;
+  }
+  .cont4{
+    display: flex;
+    justify-content: space-between;
+  }

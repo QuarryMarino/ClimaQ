@@ -1,0 +1,39 @@
+
+.central{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 30vh;
+    
+
+}
+.temperatura{
+    font-size: 50px;
+    color: white;
+    
+}
+.tempo{
+    font-size: 20px;
+    color: #50515e;
+}
+.ciudad{
+    font-size: 20px;
+    color: #50515e;
+}
+.dia{
+    font-size: 20px;
+    color: #50515e;
+}
+.cont6{
+    display: flex;
+    justify-content: center;
+}
+.iconelocal{
+    color: #50515e;
+    display: flex;
+}
+.cerrar{
+    cursor: pointer;
+}
+
+    
