@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Number3.css"
+import "./Number3.css";
 
 function Number3({ lon, lat }) {
   const [dato, setDato] = useState("");
@@ -14,7 +14,7 @@ function Number3({ lon, lat }) {
 
     setDato(datos);
   };
-  console.log(dato);
+
 
   const stringDate = (data) => {
     const str = new Date(data)
@@ -31,27 +31,29 @@ function Number3({ lon, lat }) {
   };
 
   return (
-    <>
+    <div className="divtest">
       {dato &&
         dato.list.map((e, i) => {
           if (i % 8 === 0) {
             return (
-              <section className="todoD">
-              <div key={i} className="card">
-                <h3>{stringDate(e.dt_txt)}</h3>
-                <img
-                  className="img"
-                  src={`/img/${e.weather[0].icon.replace("n", "d")}.png`}
-                  alt="icon"
-                />
-                <h1 className="max">{e.main.temp_max.toFixed(0)}°C</h1>
-                <h1 className="min">{e.main.temp_min.toFixed(0)}°C</h1>
-              </div>
+              <section key={i} className="todoD">
+                <div  className="card">
+                  <h3 className="h3t">{stringDate(e.dt_txt)}</h3>
+                  <img
+                    className="img"
+                    src={`/img/${e.weather[0].icon.replace("n", "d")}.png`}
+                    alt="icon"
+                  />
+                  <div className="h1">
+                    <h1 className="max">{e.main.temp_max.toFixed(0)}°C</h1>
+                    <h1 className="min">{e.main.temp_min.toFixed(0)}°C</h1>
+                  </div>
+                </div>
               </section>
             );
           }
         })}
-    </>
+    </div>
   );
 }
 

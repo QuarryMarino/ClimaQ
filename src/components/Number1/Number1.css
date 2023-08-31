@@ -1,39 +1,42 @@
 
-.central{
+.central2{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    height: 30vh;
+    height: 40%;
     
 
 }
 .temperatura{
-    font-size: 50px;
-    color: white;
+    font-size: 80px;
+    color: #e7e7eb;
     
 }
 .tempo{
     font-size: 20px;
-    color: #50515e;
+    color: #a09fb1;
 }
 .ciudad{
     font-size: 20px;
-    color: #50515e;
+    color: #a09fb1;
 }
 .dia{
     font-size: 20px;
-    color: #50515e;
+    color: #a09fb1;
 }
 .cont6{
     display: flex;
     justify-content: center;
 }
 .iconelocal{
-    color: #50515e;
+    color: #a09fb1;
     display: flex;
 }
 .cerrar{
     cursor: pointer;
 }
-
+.C{
+color: #a09fb1;
+font-size: 60px;
+}
     

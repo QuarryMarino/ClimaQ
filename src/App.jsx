@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Number1 from "./components/Number1/number1";
+import Number1 from "./components/Number1/Number1";
 import Number2 from "./components/Number2/Number2";
 import Number3 from "./components/Number3/Number3";
 import SideBar from "./components/SideBar/SideBar";
@@ -19,7 +19,7 @@ function App() {
 
     setDato(datos);
   };
-  console.log(dato);
+ 
 
   return (
     <div className="principal">
@@ -45,3 +45,6 @@ function App() {
 }
 
 export default App;
+
+
+

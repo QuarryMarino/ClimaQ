@@ -1,17 +1,17 @@
 .todoD{
     display: flex;
-    background-color: rgb(30, 31, 34);
+    
 }
 .card {
     color: white;
-    background: #1E213A;
-    width: 120px;
-    height: 160px;
+    background-color: #1e213a;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem;
+    padding: 15px;
+   
+    
     
 }
 .img{
@@ -19,4 +19,27 @@
     display: flex;
     justify-content: space-around;
     font-size: 0.6rem;
+}
+.divtest{
+    display: grid;
+    width: 100%;
+    place-content: center;
+    height: 50vh;
+    background-color: #100e1d;
+    grid-template-columns: 290px 290px 290px 290px 290px;
+}
+.h1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 18px;
+}
+.h3t{
+    font-size: 20px;
+}
+.min{
+    color: #67677c;
+}
+.max{
+    color: #d9d9df;
 }
