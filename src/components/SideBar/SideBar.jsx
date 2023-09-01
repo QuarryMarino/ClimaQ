@@ -35,10 +35,10 @@ const SideBar = ({ city, dato, ciudad }) => {
       />
 
       <div className="cont3">
-        <link
+        <img
           rel="icon"
           type="image/svg+xml"
-          href="./public/Imagen/Cloud-background.png"
+          href="./public/img/Cloud-background.png"
         />
 
         <div className="cont4">

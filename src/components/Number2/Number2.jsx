@@ -13,7 +13,7 @@ function Number2({ wind, humidity, visibility, pressure }) {
               className="material-symbols-outlined"
               style={{ transform: `rotate(${wind ? wind : 0}deg)`}}
             >
-              <span posi>WSW</span>
+              <span className="posi">WSW</span>
               assistant_navigation
             </span>
           </div>
