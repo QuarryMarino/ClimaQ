@@ -8,7 +8,8 @@ function Number3({ lon, lat }) {
   }, []);
   const getData = async () => {
     const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=f26a1d2c7387a78efdda84903fecbb7f`
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=3fb11bd030ed476b78ea9bf08e32c698`
+
     );
     const datos = await res.json();
 
@@ -45,7 +46,7 @@ function Number3({ lon, lat }) {
                     alt="icon"
                   />
                   <div className="h1">
-                    <h1 className="max">{e.main.temp_max.toFixed(0)}°C</h1>
+                    <h1 className="max">{e.main.temp_max.toFixed(1)}°C</h1>
                     <h1 className="min">{e.main.temp_min.toFixed(0)}°C</h1>
                   </div>
                 </div>

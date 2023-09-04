@@ -1,23 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./SideBar.css";
 import Number1 from "../Number1/Number1";
 
-const SideBar = ({ city, dato, ciudad }) => {
+const SideBar = ({ city, dato, ciudad, setLat, setLon}) => {
   const [mobile, setMobile] = useState(false);
-  const myLocation = () => {
+  const [myLocation, setMyLocation] = useState(true)
+  
+  const myLocationn = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       setLat(position.coords.latitude);
       setLon(position.coords.longitude);
     });
-    setType("latlon");
+    setType("myLocationn");
   };
+  
 
   const submitHandler = (e) => {
     e.preventDefault();
     city(e.target[0].value);
     setMobile(false);
+    setMyLocation(true);
+
   };
-  console.log(mobile);
+  console.log(myLocation);
 
   const place = (place) => {
     setPlace(place);
@@ -45,7 +50,17 @@ const SideBar = ({ city, dato, ciudad }) => {
           <button className="btnSearch" onClick={() => setMobile(true)}>
             Search for places
           </button>
-          <span className="material-symbols-outlined local">my_location</span>
+          <span
+            className='material-symbols-outlined local' onClick={() => myLocationn(true) }
+            
+          >
+            my_location
+          </span>
+          <div className={`${mobile} ${mobile ? "aparece" : ""}`}></div>
+          <span
+            className="material-symbols-outlined"
+            onClick={() => setMobile(false)}
+          ></span>
         </div>
         {/* poner aqui   */}
         <div>
@@ -82,7 +97,7 @@ const SideBar = ({ city, dato, ciudad }) => {
         <button
           className="btn"
           onClick={() => {
-            city("london");
+            city("");
             setMobile(false);
           }}
         >
