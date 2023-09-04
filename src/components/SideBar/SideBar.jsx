@@ -4,9 +4,9 @@ import Number1 from "../Number1/Number1";
 
 const SideBar = ({ city, dato, ciudad, setLat, setLon}) => {
   const [mobile, setMobile] = useState(false);
-  const [myLocation, setMyLocation] = useState(true)
+  const [location, setLocation] = useState(true)
   
-  const myLocationn = () => {
+  const myLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       setLat(position.coords.latitude);
       setLon(position.coords.longitude);
@@ -19,7 +19,7 @@ const SideBar = ({ city, dato, ciudad, setLat, setLon}) => {
     e.preventDefault();
     city(e.target[0].value);
     setMobile(false);
-    setMyLocation(true);
+    setLocation(true);
 
   };
   console.log(myLocation);
@@ -51,7 +51,7 @@ const SideBar = ({ city, dato, ciudad, setLat, setLon}) => {
             Search for places
           </button>
           <span
-            className='material-symbols-outlined local' onClick={() => myLocationn(true) }
+            className='material-symbols-outlined local' onClick={() => setLocation(true)} 
             
           >
             my_location
@@ -97,7 +97,7 @@ const SideBar = ({ city, dato, ciudad, setLat, setLon}) => {
         <button
           className="btn"
           onClick={() => {
-            city("");
+            city("london");
             setMobile(false);
           }}
         >
